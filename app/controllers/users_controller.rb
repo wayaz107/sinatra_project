@@ -2,10 +2,19 @@ require 'pry'
 class UsersController < ApplicationController
 
 get '/signup' do
-   erb :"/users/signup"
+    if !logged_in?
+   erb :'users/signup'
+   else
+    redirect '/travels'
+   end 
 end 
 
-post 'signup' do
+post '/signup' do
+    @user = User.create(params)
+    session[:user_id] = @user.id
+    redirect ''
+    
+
 end 
 
 get '/login' do
