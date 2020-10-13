@@ -32,7 +32,7 @@ class TravelsController < ApplicationController
     end 
   end
 
-#read individual
+###read individual
   get "/travels/:id" do
     if logged_in?
       @travel = Travel.find_by(id: params[:id])
@@ -43,10 +43,18 @@ class TravelsController < ApplicationController
     end 
   end 
 
-#edit
-get '/travels/:id/edit' do
-end 
+###edit
+  get '/travels/:id/edit' do
+     @travel = Travel.find_by(id: params[:id])
+     if logged_in? && current_user.id == @travel.user_id
+        erb :'/travels/edit'
+    else
+        flash[:message] = "Not authorized to edit this post!"
+        redirect '/login'
+    end 
+  end 
 
+  #start back here, and prevent users frm evn seeing edit if they cant edit that post 
 #patch
 patch "/travels/:id" do
 end 

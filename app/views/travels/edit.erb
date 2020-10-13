@@ -1,0 +1,26 @@
+<a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+
+<i><font size="2"> Please do not leave any field blank.</font></i>
+
+    <h1>Edit This Trip</h1>
+    <form action="/travels/<%= @travel.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <label>Destination</label>
+    <input type="text" name="trip_name" value="<%= @travel.trip_name %>"><br> 
+
+    <label>Itinerary</label>
+    <textarea  name="itinerary" rows="4" cols="50"  placeholder="Enter Itinerary" value="<%= @travel.itinerary %>"></textarea><br>
+    
+
+    <label>Date Visited</label>
+    <input type="text" name="start_date" value="<%= @travel.start_date %>"><br>
+
+    <label>Return Date</label>
+    <input type="text" name="end_date" value="<%= @travel.end_date%>"><br>
+
+    <label>Notes</label>
+    <input type="text" name="notes" value="<%= @travel.notes %>"><br>
+    
+    <input type="submit" value="Edit Record">
+  </form>

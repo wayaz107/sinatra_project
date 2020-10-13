@@ -15,8 +15,9 @@
         Date Visited: <%= travel.start_date %><br>
         Date Returned: <%= travel.end_date %><br>
         Notes: <%= travel.notes %><br>
-        <p>Created by <%= current_user[:username] %></p>
-        <a href="/travels/<%=travel.id%>">More Details</a></p>
-        <a href="/travels/<%= travel.id %>/edit">Edit</a>
-    <br><br>
+        <a href="/travels/<%=travel.id%>">More Details</a></p><br>
       <% end %>
+      
+
+      
+  
