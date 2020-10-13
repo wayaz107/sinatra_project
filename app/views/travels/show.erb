@@ -1,0 +1,16 @@
+<a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+
+<h1>Here are the Details of this Trip: </h1>
+<strong>Destination:</strong><%=@travel.trip_name%><br>
+<strong>Itinerary:</strong> <%=@travel.itinerary%><br>
+<strong>Date Visited:</strong> <%=@travel.start_date%><br>
+<strong>Return Date:</strong> <%=@travel.end_date%><br>
+<strong>Notes:</strong> <%=@travel.notes%><br>
+<br>
+
+<div class="btn-group-justified">
+    <a href="/travels/new" class="btn btn-primary">Add Another Trip</a><br>
+    <a href="/travels/<%=@travel.id%>/edit" class="btn btn-primary">Edit</a><br>
+    <a href="/travels/<%=@travel.id%>/delete" class="btn btn-primary">Delete</a><br>
+    <h4 style="text-align:center"> <a href="/travels" class="btn btn-primary ">Home</a><h4>
+</div>

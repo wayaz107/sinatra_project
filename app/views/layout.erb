@@ -15,6 +15,9 @@
   </head>
   <body>
     <div class="wrapper">
+    <%if flash[:message] %>
+        <h3 style ="color:red;"><%= flash[:message] %></h3>
+      <%end %>
 
         <%= yield %>
 

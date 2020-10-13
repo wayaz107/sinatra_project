@@ -1,0 +1,28 @@
+<a style="float:right" href="/logout" class="btn btn-light btn-sm" >Log out</a>
+<i>Please do not leave any field blank</i>
+
+<h1> Hooray! You are about to create a new vacation. </h2>
+
+<form method="POST" action='/travels'>
+
+    <label>Destination</label>
+    <input type="text" name="trip_name"><br> 
+
+    <label>Itinerary</label>
+    <textarea  name="itinerary" rows="4" cols="50"  placeholder="Enter Itinerary"></textarea><br>
+    
+
+    <label>Date Visited</label>
+    <input type="text" name="start_date"><br>
+
+    <label>Return Date</label>
+    <input type="text" name="end_date"><br>
+
+    <label>Notes</label>
+    <input type="text" name="notes"><br>
+
+    <input type="submit" value="Create New Trip">
+  </form>
+  <br>
+
+  <a href ="/travels">Back</a>

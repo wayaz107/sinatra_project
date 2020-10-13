@@ -1,5 +1,22 @@
+<a style="float:right" href="/logout"><button class="small_button">Log Out</button></a> </h3>
 
-  <h1>Cloud's Diary</h1>
+<h5>Warda's Travel Diary</h5>
  
+<div class="text-center">
 <h2> Welcome, <%= current_user.first_name %> <%= current_user.last_name%>!</h2>
+</div>
 
+<a href="/travels/new" class="btn btn-primary" role="button">Add a New Trip</a>
+
+<h2>All Destinations:</h2>
+      <% @travels.each do |travel| %>
+        <p>Trip Name: <%= travel.trip_name %><br>
+        Itinerary: <%= travel.itinerary %><br>
+        Date Visited: <%= travel.start_date %><br>
+        Date Returned: <%= travel.end_date %><br>
+        Notes: <%= travel.notes %><br>
+        <p>Created by <%= current_user[:username] %></p>
+        <a href="/travels/<%=travel.id%>">More Details</a></p>
+        <a href="/travels/<%= travel.id %>/edit">Edit</a>
+    <br><br>
+      <% end %>
