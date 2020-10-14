@@ -10,9 +10,8 @@
     <input type="text" name="trip_name" value="<%= @travel.trip_name %>"><br> 
 
     <label>Itinerary</label>
-    <textarea  name="itinerary" rows="4" cols="50"  placeholder="Enter Itinerary" value="<%= @travel.itinerary %>"></textarea><br>
+    <input type="text" style="height:100px; width:700px;"  name="itinerary" rows="4" cols="50"  placeholder="Enter Itinerary" value="<%= @travel.itinerary %>"><br>
     
-
     <label>Date Visited</label>
     <input type="text" name="start_date" value="<%= @travel.start_date %>"><br>
 
@@ -24,3 +23,7 @@
     
     <input type="submit" value="Edit Record">
   </form>
+  <br>
+  <br>
+
+  <h4> <a href="/travels" class="btn btn-primary">Back</a><h4>

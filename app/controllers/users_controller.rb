@@ -10,7 +10,7 @@ class UsersController < ApplicationController
    end 
 
    post '/signup' do
-    if params[:username].empty? || params[:email].empty? || params[:password].empty?
+    if params[:first_name].empty? || params[:last_name].empty? ||params[:username].empty? || params[:email].empty? || params[:password].empty?
       flash[:message] = "Oops,something wasn't right. Please make sure to fill in all the fields."
       redirect '/signup'
     else 

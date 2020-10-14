@@ -7,10 +7,19 @@
 <strong>Return Date:</strong> <%=@travel.end_date%><br>
 <strong>Notes:</strong> <%=@travel.notes%><br>
 <br>
+<label>Created by: <%=@travel.user.username %></label><br> 
+<br>
 
 <div>
     <a href="/travels/new" class="btn btn-primary">Add Another Trip</a><br>
     <a href="/travels/<%=@travel.id%>/edit" class="btn btn-primary">Edit</a><br>
-    <a href="/travels/<%=@travel.id%>/delete" class="btn btn-primary">Delete</a><br>
-    <h4 style="text-align:center"> <a href="/travels" class="btn btn-primary">Home</a><h4>
-</div>
+<div>
+
+<form method="POST" action="/travels/<%= @travel.id %>/delete">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="DELETE ">
+</form>
+
+<br>
+<h3><a href="/travels" >Home</a ></h3><br>
+<br>
