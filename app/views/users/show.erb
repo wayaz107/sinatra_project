@@ -1,0 +1,15 @@
+<a style="float:right" href="/travels" class="btn btn-light btn-sm" >Log out</a>
+
+
+<% if @user == @current_user %>
+ <h3> Here are the destinations you visited: </h3>
+
+ <%else%>
+   <h3> <%= @user.first_name%> <%= @user.last_name%>'s Travel history: </h3>
+   <%end %>
+
+   <%@user.travels.each do |travel| %>
+    <p><a href="/travels/<%=travel.id%>"><%=travel.trip_name%></a></p>
+    <%end%>
+    <a href= "/travels"> <button> Home Page </button>
+

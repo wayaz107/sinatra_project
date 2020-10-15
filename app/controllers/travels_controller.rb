@@ -4,6 +4,7 @@ class TravelsController < ApplicationController
   get '/travels' do
     if logged_in?
         @travels = Travel.all
+        @user = current_user
         erb :'/travels/index'
     else
         flash[:message] = "You are currently not logged in"
