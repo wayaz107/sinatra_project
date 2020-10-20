@@ -53,7 +53,7 @@ class TravelsController < ApplicationController
         erb :'/travels/edit'
     else
         flash[:message] = "Not authorized to edit this post!"
-        redirect '/login'
+        redirect '/travels'
     end 
   end 
 
@@ -83,6 +83,3 @@ class TravelsController < ApplicationController
        end 
     end 
 end 
-# <!-- <label>Created by: <%=@travel.user.username %></label><br> -->
-#prevent users frm evn seeing edit if they cant edit that post 
-##go back and clean your code, and put validation in ur travel class for trip_name, itenerary so you dont ahve to keep sayinf adsaf.empty? || fefge/empty? b/c validation will do that for you

@@ -28,7 +28,7 @@ class UsersController < ApplicationController
        @user = User.new(first_name: params[:first_name], last_name: params[:last_name], username: params[:username], email: params[:email], password: params[:password])
        @user.save
        session[:user_id] = @user.id
-       redirect '/travels/new'
+       redirect to "/users/#{@user.id}"
         end 
       end 
 
@@ -44,11 +44,11 @@ class UsersController < ApplicationController
        @user = User.find_by(username: params[:username])
        if @user && @user.authenticate(params[:password])
        session[:user_id] = @user.id
-       redirect '/travels'
-       else
+       redirect to "/users/#{@user.id}"
+        else
         flash[:message] = "Login Failed. Please Try Again."
         redirect '/login'
-        end 
+      end 
     end 
 
     get '/logout' do
