@@ -22,7 +22,11 @@ In your web browser, go to this url:
 $ http://localhost:9393/
 Then, you can start using the app!
 
+Contributing
 
+Bug reports and pull requests are welcome on GitHub at https://github.com/wayaz107/sinatra_project
+
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 License
 The gem is available as open source under the terms of the MIT License.
