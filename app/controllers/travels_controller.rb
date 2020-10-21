@@ -17,7 +17,7 @@ class TravelsController < ApplicationController
     if logged_in?
         erb :'/travels/new'
     else
-        flash[:message] = "You must be logged in to create a new trip."
+        flash[:message] = "Sorry something went wrong, please try again!"
         redirect '/login'
     end 
    end 
@@ -52,7 +52,7 @@ class TravelsController < ApplicationController
      if logged_in? && current_user.id == @travel.user_id
         erb :'/travels/edit'
     else
-        flash[:message] = "Not authorized to edit this post!"
+        flash[:message] = "Not authorized to edit this trip!"
         redirect '/travels'
     end 
   end 

@@ -1,6 +1,3 @@
-
- <!-- README.md includes a short description, install instructions, a contributors guide and a link to the license for your code -->
-
 SinatraTravel app
 
 This sinatra app allows users to keep track of their travel history. The users are able to log in, sign up, add new trip, view, edit and delete their existing trips.
